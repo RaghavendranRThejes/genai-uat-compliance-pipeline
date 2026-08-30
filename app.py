@@ -58,7 +58,7 @@ def run_llm_evaluator(test_cases):
         
     genai.configure(api_key=api_key)
     
-    model = genai.GenerativeModel('gemini-2.5-flash')
+    model = genai.GenerativeModel('gemini-3.6-flash')
     
     rubric_prompt = """
     You are the Senior Banking Product Owner and UAT Lead for an enterprise UAE Bank.
