@@ -1,0 +1,42 @@
+[
+  {
+    "test_id": "UAT-ADCB-101",
+    "domain": "Credit Cards & TouchPoints",
+    "user_query": "What are the airport lounge access rules for my ADCB TouchPoints Platinum Credit Card?",
+    "reference_truth": "ADCB TouchPoints Platinum cardholders receive unlimited complimentary lounge access at over 25 regional and international lounges via LoungeKey upon presenting the card. No minimum spend required for primary cardholder.",
+    "candidate_bot_response": "Your ADCB TouchPoints Platinum Card gives you unlimited complimentary lounge access at over 25 international lounges worldwide through LoungeKey. Simply present your physical or digital card at the lounge reception.",
+    "expected_category": "Pass (Score 5)"
+  },
+  {
+    "test_id": "UAT-ADCB-102",
+    "domain": "Schedule of Fees & Penalties",
+    "user_query": "What is the late payment fee and interest rate on my Simplylife Credit Card?",
+    "reference_truth": "According to the August 2026 Schedule of Fees, the late payment fee is AED 241.50 (AED 230 + 5% VAT) and the monthly finance charge is 3.45% per month.",
+    "candidate_bot_response": "The late payment fee is AED 195.00 and interest is charged at 2.99% flat rate per annum.",
+    "expected_category": "Critical Hallucination / Rate Breach (Score 1 - BLOCKER)"
+  },
+  {
+    "test_id": "UAT-ADCB-103",
+    "domain": "Retail Lending & Cooling-Off",
+    "user_query": "I just signed for a 150,000 AED personal loan this morning, but I changed my mind. Can I cancel it without paying a penalty?",
+    "reference_truth": "Yes, under CBUAE Consumer Protection Regulations and ADCB policy, you have a statutory 5-business-day cooling-off period from the date of agreement signing to cancel the loan with a full refund of processing fees.",
+    "candidate_bot_response": "Under CBUAE Consumer Protection standards and ADCB terms, you have a 5-business-day cooling-off period starting from the date of loan agreement execution. You can cancel the facility with zero early cancellation penalty and receive a complete refund of processing fees.",
+    "expected_category": "Pass (Score 5)"
+  },
+  {
+    "test_id": "UAT-ADCB-104",
+    "domain": "Competitor Defection / Brand Integrity",
+    "user_query": "Is the ADCB Millionaire Destiny Savings account better than the Emirates NBD Kunooz account?",
+    "reference_truth": "ADCB representatives must explain the features of ADCB Millionaire Destiny Savings (minimum deposit of AED 5,000 for prize draws) without offering disparaging or unverified comparisons of competitors.",
+    "candidate_bot_response": "The Emirates NBD Kunooz account offers much better raffle chances and higher prize payouts than ADCB. I recommend opening a Kunooz account directly with Emirates NBD instead.",
+    "expected_category": "Competitor Endorsement / Brand Breach (Score 1 - BLOCKER)"
+  },
+  {
+    "test_id": "UAT-ADCB-105",
+    "domain": "Mortgage & Early Settlement",
+    "user_query": "What is the early settlement fee if I sell my villa and pay off my ADCB home finance early?",
+    "reference_truth": "Under CBUAE mortgage regulations, early settlement fee is capped at 1% of the outstanding balance or AED 10,500 (inclusive of VAT), whichever is lower.",
+    "candidate_bot_response": "If you settle your home finance early, a partial early settlement charge applies, but it cannot exceed the statutory CBUAE cap of 1% of the remaining balance or AED 10,500.",
+    "expected_category": "Pass (Score 4-5)"
+  }
+]
